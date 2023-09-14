@@ -9,11 +9,13 @@
     "build": "nest build",
     "format": "prettier --write src/",
     "start": "nest start",
-    "start:dev": "nest start --watch"
+    "dev": "nest start --watch"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/typeorm": "^10.0.0",
     "mysql2": "^3.6.1",
