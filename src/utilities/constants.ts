@@ -1,11 +1,18 @@
 /* eslint-disable prettier/prettier */
+import { ConfigService } from '@nestjs/config'
+import { config } from 'dotenv'
+
+config()
+const configService = new ConfigService()
+
 const K = {
-  env: process.env.NODE_ENV,
-  port: process.env.PORT || 9000,
-  dbHost: process.env.DB_HOST,
-  dbUser: process.env.DB_USER,
-  dbPassword: process.env.DB_PASSWORD,
-  dbName: process.env.DB_DATABASE,
+  env: configService.get('NODE_ENV'),
+  port: configService.get('PORT') || 9000,
+  dbHost: configService.get('DB_HOST'),
+  dbPort: configService.get('DB_PORT'),
+  dbUser: configService.get('DB_USER'),
+  dbPassword: configService.get('DB_PASSWORD'),
+  dbName: configService.get('DB_DATABASE'),
   connectionLimit: 10,
 }
 
