@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common'
 import { UserModule } from './user/user.module'
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { dataSourceOptions } from '../db/dataSource.config'
+import typeOrmAsyncConfig from './config/typeorm.config'
 
 @Module({
-  imports: [TypeOrmModule.forRoot(dataSourceOptions), UserModule],
+  imports: [TypeOrmModule.forRootAsync(typeOrmAsyncConfig), UserModule],
   controllers: [],
   providers: [],
 })

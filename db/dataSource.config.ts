@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { DataSource, DataSourceOptions } from 'typeorm'
 import { ConfigService } from '@nestjs/config'
 import { config } from 'dotenv'
